@@ -1,0 +1,766 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* #e9e7e7 */
+:root{
+    --main-color: #be54e9;
+    --bg-color: #d8d7d7;
+    --second-bg-color: #414040;
+    --third-bg-color:#424235;
+    --off-color:gray;
+    --text-color: #ffffff;
+    --textt-color: #000000;
+}
+/* #cac9c9 */
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* .header.sticky{
+    border-bottom: .1rem solid orange;
+} */
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--main-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.navber a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: -3s;
+}
+
+.navber a:hover,
+.navber a.active{
+    color: var(--main-color);
+}
+
+/* ---------------apply menu iconhere--------------- */
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+/* ---------------------------------------------------------HOME--------------------------------------------------------- */
+.home{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+
+.home-img img{
+    width: 30vw;
+    animation: floatImage 4s ease-in-out infinite;
+    border-radius: 3rem;
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+
+}
+
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--textt-color);
+}
+
+span{
+    color: var(--main-color);
+}
+
+
+.home-content p {
+    font-size: 3rem;
+    font-weight: 200;
+    line-height: 1.3;
+    color: var(--textt-color);
+}
+
+
+/* ..............................................................ABOUT US........................................................ */
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: var(--textt-color);
+}
+
+.about2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: var(--textt-color);
+}
+
+.about-img img{
+    width: 25vw;
+    border-radius: 1.5rem;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+}
+
+.heading2{
+    text-align: center;
+    font-size: 4.5rem;
+    margin-top: -30rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about2-content h2{
+    text-align: center;
+    line-height: 1.2;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    /* margin: 2rem 0 3rem; */
+}
+
+.about2-content p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* ......................................................................COURSES...................................................... */
+
+.courses{
+    margin-bottom: 40rem;
+}
+
+.courses h2{
+    margin-bottom: 5rem;
+}
+
+
+.heading-choose{
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    color: var(--textt-color);
+}
+
+.courses-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.courses-container .courses-box{
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: left;
+    border: .2rem solid var(--second-bg-color);
+    transition: .5s ease;
+}
+
+.courses-box i{
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.courses-container .courses-box:hover{
+    border-color: var(--main-color);
+    transition: scale(1.02);
+}
+
+.courses-container .courses-box h3{
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+.ppp{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.courses-box img{
+    width: 100%;
+    border-radius: 0.9rem;
+}
+
+.courses-box .pp{
+    font-size: 1.6rem;
+    text-decoration: line-through;
+    color: rgb(182, 182, 182);
+    margin-top: 0.5rem;
+
+}
+
+.courses-container .btn-click{
+    align-items: center;
+    margin-top: 0.7rem;
+}
+
+/* -------------------------------------------------BRANDS--------------------------------------------------------------- */
+
+.heading-brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--textt-color);
+    margin-top: -40rem;
+}
+.brand{
+    margin: 30px auto;
+    width: 70%;
+    border: 5px solid var(--third-bg-color);
+    display: flex;
+    overflow-x: auto;
+}
+.brand::-webkit-scrollbar{
+    display: none;
+}
+.brand-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    animation: spin 5s infinite linear;
+    padding-right: 1rem;
+}
+
+@keyframes spin{
+    from {translate: 0;}
+    to{ translate:  -100%;}
+}
+
+/* ------------------------------------------------- HOW PAYMENT WORKS --------------------------------------------------------- */
+
+.payment{
+    margin-top: -90rem;
+}
+
+.payment h3{
+    margin-bottom: 1rem;
+}
+
+.payment-p{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: var(--textt-color);
+}
+
+.heading-payment{
+    text-align: left;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--textt-color);
+}
+
+.payment-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.payment-container .payment-box{
+    flex: 1 1 30rem;
+    background: var(--third-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--second-bg-color);
+}
+
+.payment-box h4{
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.payment-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+    line-height: -1.2rem;
+    color: var(--text-color);
+}
+
+.payment-box i{
+    font-size: 6rem;
+}
+
+/* ----------------------------------------------------------FEEDBACK--------------------------------------------------- */
+
+.explore{
+    margin-top: -25rem;
+}
+
+
+.explore1 h3{
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--textt-color);
+}
+
+/* ---------------------------------------------------------CONTACT US-------------------------------------------------- */
+
+.contact h2{
+    margin-bottom: 3rem;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--textt-color);
+    background: var(--text-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input{
+    width: 49%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.contact form .btn{
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------FOOTER---------------------------------------------------- */
+footer{
+    /* margin-top: -50rem; */
+}
+
+.foot{
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.socail-media{
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 5rem 9%;
+    background: var(--second-bg-color);
+}
+.socail-media-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.heading-social{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.socail-media1 i{
+    font-size: 7rem;
+    color: green;
+}
+
+.socail-media2 i{
+    font-size: 7rem;
+    color: blue;
+}
+
+/* -----------------------------------------------------same footer------------------------------------------------------------- */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text p{
+    font-size: 1.6rem;
+    margin-bottom: -11rem;
+}
+
+/* add icon here 45:04*/
+.footer-icontop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background: var(--main-color);
+    border-radius: 8rem;
+    transition: .5s ease;
+}
+
+.footer-icontop a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-icontop a i{
+    font-size: 2.4rem;
+    color: var(--textt-color);
+}
+
+/* ----------------------------------------------------BTN---------------------------------------------- */
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    background: var(--main-color);
+    border-radius: 1rem;
+    color: var(--text-color);
+    letter-spacing: .1rem;
+}
+
+
+
+
+
+
+/* --------------------------------------------------GRAPHICS PROFILE-------------------------------- */
+
+.graphic-small img{
+    width: 100%;
+    border-radius: 2.125rem;
+}
+
+.cp{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    background-color: #b6b5b5;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.confirm-currency{
+    font-size: 1.6rem;
+}
+
+.btn-currency{
+    background: var(--text-color);
+    color: var(--textt-color);
+    margin-top: 1rem;
+}
+.btn-popular{
+    color: orange;
+    background: rgb(245, 219, 172);
+}
+
+.btn-english{
+    color: green;
+    background: rgb(174, 228, 174);
+}
+
+.positive{
+    font-size: 1.5rem;
+    color: var(--textt-color);
+}
+
+.gra{
+    font-size: 3rem;
+    margin-top: 1rem;
+    color: var(--textt-color);
+}
+
+.back{
+    background-color:  #f3f7ef;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    color: var(--textt-color);
+}
+
+.back-29{
+    text-decoration: line-through;
+    color: gray;
+    font-size: 2rem;
+}
+
+.btn-buy-now{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(199, 6, 6);
+    border-radius: 0.25rem;
+    border-color: #000000;
+    color:white;
+    padding: 0.625rem;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-buy-now:hover{
+    background-color:rgb(199, 6, 6);
+}
+
+.flex-it{
+    border: 1.5px solid;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    color:#000000;
+    padding: 0.625rem;
+    gap: 1rem;
+    margin-top: 0.0625rem;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+
+}
+
+.flex-it:hover{
+    background-color: #ffffff;
+}
+
+.n4{
+    font-size: 3rem;
+    color: var(--textt-color);
+    margin-bottom: 2rem;
+}
+
+
+.f1{
+    display: flex;
+    align-items: start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--textt-color);
+}
+
+.f2{
+    display: flex;
+    align-items: start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--textt-color);
+}
+
+.f3{
+    display: flex;
+    align-items: start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--textt-color);
+}
+
+.f4{
+    display: flex;
+    align-items: start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--textt-color);
+}
+
+.Instructor{
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    color: var(--textt-color);
+}
+
+.boom-t{
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.what-you-learn{
+    font-size: 3rem;
+    color: var(--textt-color);
+}
+
+/* -------------------------------------------------BREAKING POINT------------------------------------ */
+@media (max-width: 1200px) {
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header{
+        padding: 2rem 3%;
+    }
+
+    section{
+        padding: 10rem 3% 2rem;
+    }
+
+    .courses{
+        padding-bottom: 7rem;
+    }
+
+    .contact{
+        min-height: auto;
+    }
+
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon{
+        display: block;
+    }
+
+    .navber{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid ;
+        display: none;
+    }
+
+    .navber.active{
+        display: block;
+    }
+
+    .navber a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home{
+        flex-direction: column;
+    }
+
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 65vw;
+        margin-top: 4rem;
+    }
+
+    .about{
+        flex-direction: column-reverse;
+    }
+
+    .about img{
+        width: 60vw;
+        margin-top: 4rem;
+    }
+
+    .courses h2{
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html{
+        font-size: 50%;
+    }
+
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px){
+    .home-img img{
+        width: 85vw;
+    }
+
+    .about-img img{
+        width: 80vw;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+    }
+
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
